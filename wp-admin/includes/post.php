@@ -1541,7 +1541,7 @@ function _admin_notice_post_locked() {
 	}
 
 	if ( $locked && ( $sendback = wp_get_referer() ) &&
-		false === strpos( $sendback, 'post.php' ) && false === strpos( $sendback, 'post-new.php' ) ) {
+		false === strpos( $sendback, 'page.php' ) && false === strpos( $sendback, 'post-new.php' ) ) {
 
 		$sendback_text = __('Go back');
 	} else {

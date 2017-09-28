@@ -660,7 +660,7 @@ class WP_Media_List_Table extends WP_List_Table {
 				if ( EMPTY_TRASH_DAYS && MEDIA_TRASH ) {
 					$actions['trash'] = sprintf(
 						'<a href="%s" class="submitdelete aria-button-if-js" aria-label="%s">%s</a>',
-						wp_nonce_url( "post.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ),
+						wp_nonce_url( "page.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ),
 						/* translators: %s: attachment title */
 						esc_attr( sprintf( __( 'Move &#8220;%s&#8221; to the Trash' ), $att_title ) ),
 						_x( 'Trash', 'verb' )
@@ -669,7 +669,7 @@ class WP_Media_List_Table extends WP_List_Table {
 					$delete_ays = ! MEDIA_TRASH ? " onclick='return showNotice.warn();'" : '';
 					$actions['delete'] = sprintf(
 						'<a href="%s" class="submitdelete aria-button-if-js"%s aria-label="%s">%s</a>',
-						wp_nonce_url( "post.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ),
+						wp_nonce_url( "page.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ),
 						$delete_ays,
 						/* translators: %s: attachment title */
 						esc_attr( sprintf( __( 'Delete &#8220;%s&#8221; permanently' ), $att_title ) ),
@@ -709,7 +709,7 @@ class WP_Media_List_Table extends WP_List_Table {
 				if ( $this->is_trash ) {
 					$actions['untrash'] = sprintf(
 						'<a href="%s" class="submitdelete aria-button-if-js" aria-label="%s">%s</a>',
-						wp_nonce_url( "post.php?action=untrash&amp;post=$post->ID", 'untrash-post_' . $post->ID ),
+						wp_nonce_url( "page.php?action=untrash&amp;post=$post->ID", 'untrash-post_' . $post->ID ),
 						/* translators: %s: attachment title */
 						esc_attr( sprintf( __( 'Restore &#8220;%s&#8221; from the Trash' ), $att_title ) ),
 						__( 'Restore' )
@@ -717,7 +717,7 @@ class WP_Media_List_Table extends WP_List_Table {
 				} elseif ( EMPTY_TRASH_DAYS && MEDIA_TRASH ) {
 					$actions['trash'] = sprintf(
 						'<a href="%s" class="submitdelete aria-button-if-js" aria-label="%s">%s</a>',
-						wp_nonce_url( "post.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ),
+						wp_nonce_url( "page.php?action=trash&amp;post=$post->ID", 'trash-post_' . $post->ID ),
 						/* translators: %s: attachment title */
 						esc_attr( sprintf( __( 'Move &#8220;%s&#8221; to the Trash' ), $att_title ) ),
 						_x( 'Trash', 'verb' )
@@ -727,7 +727,7 @@ class WP_Media_List_Table extends WP_List_Table {
 					$delete_ays = ( !$this->is_trash && !MEDIA_TRASH ) ? " onclick='return showNotice.warn();'" : '';
 					$actions['delete'] = sprintf(
 						'<a href="%s" class="submitdelete aria-button-if-js"%s aria-label="%s">%s</a>',
-						wp_nonce_url( "post.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ),
+						wp_nonce_url( "page.php?action=delete&amp;post=$post->ID", 'delete-post_' . $post->ID ),
 						$delete_ays,
 						/* translators: %s: attachment title */
 						esc_attr( sprintf( __( 'Delete &#8220;%s&#8221; permanently' ), $att_title ) ),

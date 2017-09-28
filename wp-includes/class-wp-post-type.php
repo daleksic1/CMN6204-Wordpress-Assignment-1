@@ -296,13 +296,13 @@ final class WP_Post_Type {
 	/**
 	 * URL segment to use for edit link of this post type.
 	 *
-	 * Default 'post.php?post=%d'.
+	 * Default 'page.php?post=%d'.
 	 *
 	 * @since 4.6.0
 	 * @access public
 	 * @var string $_edit_link
 	 */
-	public $_edit_link = 'post.php?post=%d';
+	public $_edit_link = 'page.php?post=%d';
 
 	/**
 	 * Post type capabilities.
@@ -438,7 +438,7 @@ final class WP_Post_Type {
 			'rest_base'             => false,
 			'rest_controller_class' => false,
 			'_builtin'              => false,
-			'_edit_link'            => 'post.php?post=%d',
+			'_edit_link'            => 'page.php?post=%d',
 		);
 
 		$args = array_merge( $defaults, $args );

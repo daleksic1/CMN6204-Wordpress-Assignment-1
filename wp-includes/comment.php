@@ -2347,7 +2347,7 @@ function wp_update_comment_count_now($post_id) {
 	 * @param int $old     The old comment count.
 	 */
 	do_action( 'wp_update_comment_count', $post_id, $new, $old );
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-includes/page.php */
 	do_action( 'edit_post', $post_id, $post );
 
 	return true;
@@ -2899,7 +2899,7 @@ function _close_comments_for_old_post( $open, $post_id ) {
 }
 
 /**
- * Handles the submission of a comment, usually posted to wp-comments-post.php via a comment form.
+ * Handles the submission of a comment, usually posted to wp-comments-page.php via a comment form.
  *
  * This function expects unslashed data, as opposed to functions such as `wp_new_comment()` which
  * expect slashed data.

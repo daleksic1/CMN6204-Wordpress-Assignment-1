@@ -108,7 +108,7 @@ class Akismet_Admin {
 			'index.php', # dashboard
 			'edit-comments.php',
 			'comment.php',
-			'post.php',
+			'page.php',
 			'settings_page_akismet-key-config',
 			'jetpack_page_akismet-key-config',
 			'plugins.php',

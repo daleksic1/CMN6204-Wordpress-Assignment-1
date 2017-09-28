@@ -5,3 +5,6 @@
     <title>Document</title>
 </head>
 <body>
+<nav id="main-menu">
+    <?php wp_nav_menu(['theme_location'=>'main']); ?>
+</nav>

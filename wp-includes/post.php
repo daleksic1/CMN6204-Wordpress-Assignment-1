@@ -24,7 +24,7 @@ function create_initial_post_types() {
 		),
 		'public'  => true,
 		'_builtin' => true, /* internal use only. don't use this when registering your own post type. */
-		'_edit_link' => 'post.php?post=%d', /* internal use only. don't use this when registering your own post type. */
+		'_edit_link' => 'page.php?post=%d', /* internal use only. don't use this when registering your own post type. */
 		'capability_type' => 'post',
 		'map_meta_cap' => true,
 		'menu_position' => 5,
@@ -45,7 +45,7 @@ function create_initial_post_types() {
 		'public' => true,
 		'publicly_queryable' => false,
 		'_builtin' => true, /* internal use only. don't use this when registering your own post type. */
-		'_edit_link' => 'post.php?post=%d', /* internal use only. don't use this when registering your own post type. */
+		'_edit_link' => 'page.php?post=%d', /* internal use only. don't use this when registering your own post type. */
 		'capability_type' => 'page',
 		'map_meta_cap' => true,
 		'menu_position' => 20,
@@ -71,7 +71,7 @@ function create_initial_post_types() {
 		'public' => true,
 		'show_ui' => true,
 		'_builtin' => true, /* internal use only. don't use this when registering your own post type. */
-		'_edit_link' => 'post.php?post=%d', /* internal use only. don't use this when registering your own post type. */
+		'_edit_link' => 'page.php?post=%d', /* internal use only. don't use this when registering your own post type. */
 		'capability_type' => 'post',
 		'capabilities' => array(
 			'create_posts' => 'upload_files',
@@ -1098,7 +1098,7 @@ function get_post_types( $args = array(), $output = 'names', $operator = 'and' )
  *     @type bool        $_builtin              FOR INTERNAL USE ONLY! True if this post type is a native or
  *                                              "built-in" post_type. Default false.
  *     @type string      $_edit_link            FOR INTERNAL USE ONLY! URL segment to use for edit link of
- *                                              this post type. Default 'post.php?post=%d'.
+ *                                              this post type. Default 'page.php?post=%d'.
  * }
  * @return WP_Post_Type|WP_Error The registered post type object, or an error object.
  */
@@ -2195,7 +2195,7 @@ function wp_count_posts( $type = 'post', $perm = '' ) {
 
 	$counts = wp_cache_get( $cache_key, 'counts' );
 	if ( false !== $counts ) {
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-includes/page.php */
 		return apply_filters( 'wp_count_posts', $counts, $type, $perm );
 	}
 
@@ -3609,16 +3609,16 @@ function wp_publish_post( $post ) {
 	$post->post_status = 'publish';
 	wp_transition_post_status( 'publish', $old_status, $post );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-includes/page.php */
 	do_action( 'edit_post', $post->ID, $post );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-includes/page.php */
 	do_action( "save_post_{$post->post_type}", $post->ID, $post, true );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-includes/page.php */
 	do_action( 'save_post', $post->ID, $post, true );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-includes/page.php */
 	do_action( 'wp_insert_post', $post->ID, $post, true );
 }
 
@@ -4576,7 +4576,7 @@ function get_pages( $args = array() ) {
 	if ( $cache = wp_cache_get( $cache_key, 'posts' ) ) {
 		// Convert to WP_Post instances.
 		$pages = array_map( 'get_post', $cache );
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-includes/page.php */
 		$pages = apply_filters( 'get_pages', $pages, $r );
 		return $pages;
 	}
@@ -4718,7 +4718,7 @@ function get_pages( $args = array() ) {
 	$pages = $wpdb->get_results($query);
 
 	if ( empty($pages) ) {
-		/** This filter is documented in wp-includes/post.php */
+		/** This filter is documented in wp-includes/page.php */
 		$pages = apply_filters( 'get_pages', array(), $r );
 		return $pages;
 	}
@@ -4910,13 +4910,13 @@ function wp_delete_attachment( $post_id, $force_delete = false ) {
 	foreach ( $post_meta_ids as $mid )
 		delete_metadata_by_mid( 'post', $mid );
 
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-includes/page.php */
 	do_action( 'delete_post', $post_id );
 	$result = $wpdb->delete( $wpdb->posts, array( 'ID' => $post_id ) );
 	if ( ! $result ) {
 		return false;
 	}
-	/** This action is documented in wp-includes/post.php */
+	/** This action is documented in wp-includes/page.php */
 	do_action( 'deleted_post', $post_id );
 
 	$uploadpath = wp_get_upload_dir();

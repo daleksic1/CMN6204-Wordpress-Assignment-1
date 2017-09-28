@@ -462,7 +462,7 @@ function get_search_template() {
  *
  * 1. templates/full-width.php
  * 2. single-post-hello-world.php
- * 3. single-post.php
+ * 3. single-page.php
  * 4. single.php
  *
  * The template hierarchy is filterable via the {@see 'single_template_hierarchy'} hook.
@@ -515,7 +515,7 @@ function get_single_template() {
  * An example of this is:
  *
  * 1. embed-post-audio.php
- * 2. embed-post.php
+ * 2. embed-page.php
  * 3. embed.php
  *
  * The template hierarchy is filterable via the {@see 'embed_template_hierarchy'} hook.

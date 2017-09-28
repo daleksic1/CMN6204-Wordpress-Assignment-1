@@ -1171,7 +1171,7 @@ final class WP_Screen {
 
 		// Back compat
 		if ( isset( $this->post_type ) ) {
-			/** This filter is documented in wp-admin/includes/post.php */
+			/** This filter is documented in wp-admin/includes/page.php */
 			$per_page = apply_filters( 'edit_posts_per_page', $per_page, $this->post_type );
 		}
 

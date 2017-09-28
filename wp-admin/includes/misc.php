@@ -856,7 +856,7 @@ function wp_refresh_post_nonces( $response, $data, $screen_id ) {
 function wp_heartbeat_set_suspension( $settings ) {
 	global $pagenow;
 
-	if ( 'post.php' === $pagenow || 'post-new.php' === $pagenow ) {
+	if ( 'page.php' === $pagenow || 'post-new.php' === $pagenow ) {
 		$settings['suspension'] = 'disable';
 	}
 

@@ -2895,7 +2895,7 @@ function _wp_customize_publish_changeset( $new_status, $old_status, $changeset_p
 		if ( ! EMPTY_TRASH_DAYS ) {
 			wp_delete_post( $post_id, true );
 		} else {
-			/** This action is documented in wp-includes/post.php */
+			/** This action is documented in wp-includes/page.php */
 			do_action( 'wp_trash_post', $post_id );
 
 			add_post_meta( $post_id, '_wp_trash_meta_status', $post->post_status );
@@ -2909,19 +2909,19 @@ function _wp_customize_publish_changeset( $new_status, $old_status, $changeset_p
 			$post->post_status = $new_status;
 			wp_transition_post_status( $new_status, $old_status, $post );
 
-			/** This action is documented in wp-includes/post.php */
+			/** This action is documented in wp-includes/page.php */
 			do_action( 'edit_post', $post->ID, $post );
 
-			/** This action is documented in wp-includes/post.php */
+			/** This action is documented in wp-includes/page.php */
 			do_action( "save_post_{$post->post_type}", $post->ID, $post, true );
 
-			/** This action is documented in wp-includes/post.php */
+			/** This action is documented in wp-includes/page.php */
 			do_action( 'save_post', $post->ID, $post, true );
 
-			/** This action is documented in wp-includes/post.php */
+			/** This action is documented in wp-includes/page.php */
 			do_action( 'wp_insert_post', $post->ID, $post, true );
 
-			/** This action is documented in wp-includes/post.php */
+			/** This action is documented in wp-includes/page.php */
 			do_action( 'trashed_post', $post_id );
 		}
 	}

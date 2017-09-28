@@ -494,7 +494,7 @@ function wp_dashboard_quick_press( $error_msg = false ) {
 	$post_ID = (int) $post->ID;
 ?>
 
-	<form name="post" action="<?php echo esc_url( admin_url( 'post.php' ) ); ?>" method="post" id="quick-press" class="initial-form hide-if-no-js">
+	<form name="post" action="<?php echo esc_url( admin_url( 'page.php' ) ); ?>" method="post" id="quick-press" class="initial-form hide-if-no-js">
 
 		<?php if ( $error_msg ) : ?>
 		<div class="error"><?php echo $error_msg; ?></div>

@@ -281,7 +281,7 @@ class acf_field_group
 		
 		
 		// validate page
-		if( in_array( $pagenow, array('post.php', 'post-new.php') ) )
+		if( in_array( $pagenow, array('page.php', 'post-new.php') ) )
 		{
 		
 			// validate post type

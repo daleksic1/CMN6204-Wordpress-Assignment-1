@@ -48,7 +48,7 @@ if ( ! is_customize_preview() ) {
 	add_filter( 'admin_print_styles', 'wp_resource_hints', 1 );
 }
 
-add_action( 'admin_print_scripts-post.php',     'wp_page_reload_on_back_button_js' );
+add_action( 'admin_print_scripts-page.php',     'wp_page_reload_on_back_button_js' );
 add_action( 'admin_print_scripts-post-new.php', 'wp_page_reload_on_back_button_js' );
 
 add_action( 'update_option_home',          'update_home_siteurl', 10, 2 );

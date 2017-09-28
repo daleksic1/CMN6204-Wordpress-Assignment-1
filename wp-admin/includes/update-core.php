@@ -47,7 +47,7 @@ $_old_files = array(
 'wp-includes/feed-functions.php',
 'wp-includes/functions-compat.php',
 'wp-includes/functions-formatting.php',
-'wp-includes/functions-post.php',
+'wp-includes/functions-page.php',
 'wp-includes/js/dbx-key.js',
 'wp-includes/js/tinymce/plugins/autosave/langs/cs.js',
 'wp-includes/js/tinymce/plugins/autosave/langs/sv.js',
@@ -57,7 +57,7 @@ $_old_files = array(
 'wp-includes/template-functions-category.php',
 'wp-includes/template-functions-general.php',
 'wp-includes/template-functions-links.php',
-'wp-includes/template-functions-post.php',
+'wp-includes/template-functions-page.php',
 'wp-includes/wp-l10n.php',
 // 2.2
 'wp-admin/cat-js.php',
