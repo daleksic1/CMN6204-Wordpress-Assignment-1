@@ -47,14 +47,14 @@ If you have any questions during the way (and you should), please ask on Slack, 
 2. Look at the comments made on the Code Review in your Pull Request. If there is anything left unsolved, please solve it.
 3. Create a new empty template from scratch. Name it Assignment1. You can find additional instructions and information on the [Wordpress Codex](https://codex.wordpress.org/Theme_Development)
 
-3.2 Add the screenshot to your newly created theme, like we did in the class. Verify that WP Admin is really showing it on the themes screen. You can find the attached screenshot under the name `netscape-image.jpg` in the `assets-week-2` folder.
-4. Implement the index page like we did in the class. You can find the HTML template attached in the `assets-week-2` folder.
-5. Split the newly created template into header, index and footer. Like we did in class today.
-6. Go into WP admin to create a new Page named `Home Page`, with 3 sentences of welcome text.
-7. Find a way, how to assign this particular page to be the static Home page. (hint:settings)
-8. Find a way, how to change the template header title, so that it always shows Site title. The one that you can change in `WPAdmin > Settings > General`.
-9. Find a way to do the same thing but using both site title and site tagline, like this > `Site Title ~ Site tagline`.
-10. Add, commit and push all your changes to git. Export the database, replace the old backup and commit that also.
+4. Add the screenshot to your newly created theme, like we did in the class. Verify that WP Admin is really showing it on the themes screen. You can find the attached screenshot under the name `netscape-image.jpg` in the `assets-week-2` folder.
+5. Implement the index page like we did in the class. You can find the HTML template attached in the `assets-week-2` folder.
+6. Split the newly created template into header, index and footer. Like we did in class today.
+7. Go into WP admin to create a new Page named `Home Page`, with 3 sentences of welcome text.
+8. Find a way, how to assign this particular page to be the static Home page. (hint:settings)
+9. Find a way, how to change the template header title, so that it always shows Site title. The one that you can change in `WPAdmin > Settings > General`.
+10. Find a way to do the same thing but using both site title and site tagline, like this > `Site Title ~ Site tagline`.
+11. Add, commit and push all your changes to git. Export the database, replace the old backup and commit that also.
 
 
 Rejoice, Hooray!
